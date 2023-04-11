@@ -111,6 +111,10 @@ Optionally, you can build the conda-forge packages locally to test if the recipe
     mamba install -n ag -c "file://${PWD}/build_artifacts" -c conda-forge  autogluon.multimodal
    ```
 
+   Make sure to check the `pytorch` version in the list of packages to install. If you see `cuda` in the version number, that means the package is built with CUDA support. Otherwise, it's built without CUDA support.
+
+![](https://i.imgur.com/mpGM1pV.png)
+
 ## How to add maintainers to the conda-forge recipes
 
 1. Go to the feedstock repo, e.g., [autogluon.common-feedstock](https://github.com/conda-forge/autogluon-feedstock/issues/new/choose).
